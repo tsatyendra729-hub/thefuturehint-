@@ -96,7 +96,13 @@ frameborder="0" allowfullscreen>
 <div class="card">All State Nursing Exams</div></div><!-- TEST --><div id="test" class="hidden">
 <h1>Online Test</h1><div class="card">
 <p>Test series will be available soon</p>
-<button onclick="alert('Coming Soon')">Start Test</button>
+<button onclick="startQuiz()">Start Test</button>
+
+<div id="quizBox" style="display:none; margin-top:15px;">
+  <h3 id="question"></h3>
+  <div id="options"></div>
+  <button onclick="nextQuestion()">Next</button>
+</div>
 </div></div><!-- LIVE --><div id="live" class="hidden">
 <h1>Live Classes</h1><div class="card">
 <p></p><a href="https://www.youtube.com/@thefuturehint" target="_blank">
@@ -111,3 +117,67 @@ frameborder="0" allowfullscreen>
 Created by Rohit Mishra, Satyendra Tiwari
 </footer></body>
 </html>
+<script>
+let q = 0;
+let score = 0;
+
+const quiz = [
+{
+q:"Human body ka sabse bada organ kaunsa hai?",
+options:["Liver","Skin","Heart","Kidney"],
+ans:1
+},
+{
+q:"Normal body temperature hota hai?",
+options:["96.8°F","98.6°F","100°F","102°F"],
+ans:1
+},
+{
+q:"RBC ka main function kya hai?",
+options:["Infection se ladna","Oxygen carry karna","Blood clot","Hormone"],
+ans:1
+},
+{
+q:"BP measure karne ka instrument?",
+options:["Stethoscope","Thermometer","Sphygmomanometer","ECG"],
+ans:2
+},
+{
+q:"Pulse rate normal adult me?",
+options:["40–60","60–100","100–140","120–160"],
+ans:1
+}
+];
+
+function startQuiz(){
+document.getElementById("quizBox").style.display="block";
+showQ();
+}
+
+function showQ(){
+let ques = quiz[q];
+document.getElementById("question").innerText = ques.q;
+
+let optHTML = "";
+ques.options.forEach((opt,i)=>{
+optHTML += `<button onclick="checkAns(${i})">${opt}</button><br><br>`;
+});
+document.getElementById("options").innerHTML = optHTML;
+}
+
+function checkAns(i){
+if(i === quiz[q].ans){
+score++;
+}
+}
+
+function nextQuestion(){
+q++;
+if(q < quiz.length){
+showQ();
+}else{
+document.getElementById("quizBox").innerHTML =
+"<h2>Your Score: "+score+"/"+quiz.length+"</h2>";
+}
+}
+</script>
