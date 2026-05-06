@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Future Hint</title><style>
+body{margin:0;font-family:Arial;background:#0b0b0b;color:#fff}
+nav{position:sticky;top:0;background:#111;display:flex;justify-content:space-around;padding:10px}
+nav a{color:gold;text-decoration:none;font-size:14px}
+.section{padding:40px 15px;border-bottom:1px solid #222}
+.card{background:#1a1a1a;padding:15px;border-radius:10px;margin:10px 0}
+button{background:gold;border:none;padding:10px;border-radius:6px;margin-top:10px}
+footer{text-align:center;padding:15px;background:#111}
+</style></head><body><!-- NAVBAR --><nav>
+<a href="#home">Home</a>
+<a href="#courses">Courses</a>
+<a href="#test">Test</a>
+<a href="#live">Live</a>
+<a href="#contact">Contact</a>
+</nav><!-- HOME --><div id="home" class="section">
+<div class="card">
+<h1>The Future Hint</h1>
+<p>1000+ Students are preparing with us</p>
+<p>Best Coaching for Nursing Exams</p>
+</div>
+</div><!-- COURSES --><div id="courses" class="section">
+<h2>Our Courses</h2>
+<div class="card">
+<p>UP Nursing</p>
+<p>MP Nursing</p>
+<p>All State Nursing Exams</p>
+</div>
+</div><!-- TEST --><div id="test" class="section">
+<h2>Online Test</h2>
+<div class="card">
+<p id="q"></p>
+<div id="opt"></div>
+<button onclick="nextQ()">Next</button>
+<p id="score"></p>
+</div>
+</div><!-- LIVE --><div id="live" class="section">
+<h2>Live Classes</h2>
+<div class="card">
+<p>Live classes will be available soon</p>
+<a href="https://youtube.com" style="color:gold">Watch Classes</a>
+</div>
+</div><!-- CONTACT --><div id="contact" class="section">
+<h2>Contact</h2>
+<div class="card">
+<p>📞 <a href="tel:+917723812221" style="color:gold">7723812221</a></p>
+<p>📞 <a href="tel:+917389303815" style="color:gold">7389303815</a></p>
+<p>📍 Raipur, C.G</p>
+<p>Created by Rohit Mishra, Satyendra Tiwari</p>
+</div>
+</div><footer>
+© 2026 The Future Hint
+</footer><script>
+// Test System
+let qn=[
+{q:"2+2=?",o:["3","4","5"],a:"4"},
+{q:"5×2=?",o:["10","8","6"],a:"10"},
+{q:"10÷2=?",o:["2","5","8"],a:"5"}
+];
+
+let i=0,s=0;
+
+function loadQ(){
+let q=qn[i];
+document.getElementById("q").innerText=q.q;
+
+let html="";
+q.o.forEach(x=>{
+html+=`<button onclick="ans('${x}')">${x}</button>`;
+});
+
+document.getElementById("opt").innerHTML=html;
+}
+
+function ans(x){
+if(x===qn[i].a) s++;
+}
+
+function nextQ(){
+i++;
+if(i<qn.length){
+loadQ();
+}else{
+document.getElementById("q").innerText="Test Completed";
+document.getElementById("opt").innerHTML="";
+document.getElementById("score").innerText="Score: "+s;
+}
+}
+
+loadQ();
+</script></body>
+</html>
