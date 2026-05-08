@@ -13,12 +13,9 @@ scroll-behavior:smooth;
 
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 background:#f5f7fb;
-color:#222;
 }
-
-/* NAVBAR */
 
 nav{
 display:flex;
@@ -45,12 +42,6 @@ color:#333;
 font-weight:bold;
 }
 
-.menu a:hover{
-color:red;
-}
-
-/* HERO */
-
 .hero{
 background:linear-gradient(135deg,#1e2a78,#4054d6);
 color:white;
@@ -59,20 +50,11 @@ padding:80px 20px;
 }
 
 .hero h1{
-font-size:36px;
-margin-bottom:10px;
+font-size:35px;
 }
-
-.hero p{
-font-size:18px;
-max-width:700px;
-margin:auto;
-}
-
-/* SECTION */
 
 section{
-padding:60px 20px;
+padding:50px 20px;
 }
 
 .title{
@@ -82,8 +64,6 @@ margin-bottom:30px;
 color:#1e2a78;
 }
 
-/* CARD */
-
 .card{
 background:white;
 padding:25px;
@@ -92,32 +72,19 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 margin-bottom:20px;
 }
 
-/* COURSE GRID */
-
-.course-grid{
+.course-grid,.test-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-.course{
+.course,.test{
 background:white;
-padding:25px;
+padding:20px;
 border-radius:15px;
-text-align:center;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:0.3s;
+text-align:center;
 }
-
-.course:hover{
-transform:translateY(-5px);
-}
-
-.course h3{
-color:#1e2a78;
-}
-
-/* BUTTON */
 
 button{
 background:red;
@@ -126,33 +93,33 @@ padding:10px 20px;
 border:none;
 border-radius:8px;
 cursor:pointer;
-font-weight:bold;
 margin-top:10px;
+font-weight:bold;
 }
 
-/* TEST BOX */
-
-.test-box{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+input{
+width:100%;
+padding:12px;
+margin-top:10px;
+border-radius:8px;
+border:1px solid #ccc;
 }
 
-.test{
+.quiz-box{
 background:white;
 padding:20px;
 border-radius:15px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
+margin-bottom:25px;
 }
 
-/* CONTACT */
-
-.contact p{
-font-size:18px;
-line-height:35px;
+.quiz-box h3{
+color:#1e2a78;
 }
 
-/* FOOTER */
+.option{
+margin:8px 0;
+}
 
 footer{
 background:#111;
@@ -161,23 +128,23 @@ text-align:center;
 padding:15px;
 }
 
-/* MOBILE */
-
 @media(max-width:768px){
 
-.hero h1{
-font-size:28px;
+nav{
+flex-direction:column;
 }
 
 .menu{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+margin-top:10px;
 }
 
 .menu a{
+display:inline-block;
 margin:5px;
-font-size:14px;
+}
+
+.hero h1{
+font-size:28px;
 }
 
 }
@@ -187,10 +154,7 @@ font-size:14px;
 
 <body>
 
-<!-- NAVBAR -->
-
 <nav>
-
 <div class="logo">The Future Hint</div>
 
 <div class="menu">
@@ -198,264 +162,221 @@ font-size:14px;
 <a href="#about">About</a>
 <a href="#courses">Courses</a>
 <a href="#test">Test</a>
+<a href="#login">Enroll</a>
 <a href="#contact">Contact</a>
 </div>
-
 </nav>
 
-<!-- HOME -->
-
 <section id="home" class="hero">
-
 <h1>Best Coaching Center for Nursing & Competitive Exams</h1>
-
-<p>
-Prepare for UP Nursing, MP Nursing, Police, Railway and other competitive exams with expert guidance, live classes and mock tests.
-</p>
-
+<p>UP Nursing | MP Nursing | Police | Railway | SSC | Other Exams</p>
 </section>
-
-<!-- ABOUT -->
 
 <section id="about">
-
 <h2 class="title">About Us</h2>
-
 <div class="card">
-
-<p>
-<b>The Future Hint</b> is a trusted educational platform dedicated to helping students achieve success in Nursing and Competitive Exams.
-</p>
-
+<p><b>The Future Hint</b> provides quality education for Nursing, Police, Railway and other competitive exams.</p>
 <ul>
-<li>Experienced Faculty</li>
 <li>Daily Practice Questions</li>
-<li>Live Interactive Classes</li>
-<li>Weekly Mock Tests</li>
+<li>Live Classes</li>
+<li>Mock Tests</li>
 <li>Bilingual Study Material</li>
-<li>Affordable Courses</li>
+<li>Expert Teachers</li>
 </ul>
-
 </div>
-
 </section>
 
-<!-- COURSES -->
-
 <section id="courses">
-
 <h2 class="title">Our Courses</h2>
-
 <div class="course-grid">
 
 <div class="course">
 <h3>UP Nursing</h3>
-<p>Complete syllabus with mock tests and practice sets.</p>
-<a href="#upnursing"><button>Enroll Now</button></a>
+<p>Complete preparation with tests and notes.</p>
+<a href="#login"><button>Enroll Now</button></a>
 </div>
 
 <div class="course">
 <h3>MP Nursing</h3>
-<p>Expert guidance for MP Nursing entrance preparation.</p>
-<a href="#mpnursing"><button>Enroll Now</button></a>
+<p>Best classes for MP Nursing exam.</p>
+<a href="#login"><button>Enroll Now</button></a>
 </div>
 
 <div class="course">
 <h3>UP Police</h3>
-<p>Physical + Written exam preparation with PYQs.</p>
-<a href="#uppolice"><button>Enroll Now</button></a>
+<p>Written + Physical preparation.</p>
+<a href="#login"><button>Enroll Now</button></a>
 </div>
 
 <div class="course">
 <h3>Railway</h3>
-<p>Railway Group D & NTPC complete preparation.</p>
-<a href="#railway"><button>Enroll Now</button></a>
+<p>Daily classes and practice sets.</p>
+<a href="#login"><button>Enroll Now</button></a>
 </div>
 
 </div>
-
 </section>
 
-<!-- ENROLL SECTIONS -->
-
-<section id="upnursing">
+<section id="login">
+<h2 class="title">Student Login / Enrollment</h2>
 
 <div class="card">
+<h3>Login With Mobile Number</h3>
 
-<h2>UP Nursing Enrollment</h2>
+<input type="text" placeholder="Enter Mobile Number">
+<input type="text" placeholder="Enter OTP">
 
-<p>
-Course Duration : 6 Months <br>
-Mode : Online + Offline <br>
-Study Material : Included <br>
-Mock Tests : Weekly
-</p>
+<button onclick="showMessage()">Login / Enroll</button>
 
-<button>Join Course</button>
-
+<p id="success"></p>
 </div>
-
 </section>
-
-<section id="mpnursing">
-
-<div class="card">
-
-<h2>MP Nursing Enrollment</h2>
-
-<p>
-Complete MP Nursing preparation with expert teachers and practice sets.
-</p>
-
-<button>Join Course</button>
-
-</div>
-
-</section>
-
-<section id="uppolice">
-
-<div class="card">
-
-<h2>UP Police Enrollment</h2>
-
-<p>
-Written exam + Physical preparation with previous year questions.
-</p>
-
-<button>Join Course</button>
-
-</div>
-
-</section>
-
-<section id="railway">
-
-<div class="card">
-
-<h2>Railway Enrollment</h2>
-
-<p>
-Daily classes, test series and full syllabus coverage for Railway exams.
-</p>
-
-<button>Join Course</button>
-
-</div>
-
-</section>
-
-<!-- TEST -->
 
 <section id="test">
+<h2 class="title">MCQ Test Series</h2>
 
-<h2 class="title">Test Series</h2>
-
-<div class="test-box">
-
+<div class="test-grid">
 <div class="test">
-<h3>Daily Practice Test</h3>
-<p>Practice daily MCQs with instant score.</p>
-<a href="#dailytest"><button>Open Test</button></a>
+<h3>UP Nursing Test</h3>
+<a href="#test1"><button>Open Test</button></a>
 </div>
 
 <div class="test">
-<h3>Weekly Mock Test</h3>
-<p>Full syllabus mock tests every week.</p>
-<a href="#mocktest"><button>Open Test</button></a>
+<h3>Police Test</h3>
+<a href="#test2"><button>Open Test</button></a>
 </div>
 
 <div class="test">
-<h3>Previous Year Questions</h3>
-<p>Important PYQs with detailed solutions.</p>
-<a href="#pyq"><button>Open Test</button></a>
+<h3>Railway Test</h3>
+<a href="#test3"><button>Open Test</button></a>
 </div>
-
 </div>
-
 </section>
 
-<!-- TEST DETAILS -->
+<section id="test1">
+<h2 class="title">UP Nursing MCQ Test</h2>
 
-<section id="dailytest">
+<div class="quiz-box">
+<h3>1. Human heart has how many chambers?</h3>
+<div class="option"><input type="radio" name="q1"> 2</div>
+<div class="option"><input type="radio" name="q1"> 3</div>
+<div class="option"><input type="radio" name="q1"> 4</div>
+<div class="option"><input type="radio" name="q1"> 5</div>
+</div>
 
+<div class="quiz-box">
+<h3>2. Vitamin C is known as?</h3>
+<div class="option"><input type="radio" name="q2"> Retinol</div>
+<div class="option"><input type="radio" name="q2"> Ascorbic Acid</div>
+<div class="option"><input type="radio" name="q2"> Calciferol</div>
+<div class="option"><input type="radio" name="q2"> Thiamine</div>
+</div>
+
+<div class="quiz-box">
+<h3>3. Blood group universal donor?</h3>
+<div class="option"><input type="radio" name="q3"> A</div>
+<div class="option"><input type="radio" name="q3"> B</div>
+<div class="option"><input type="radio" name="q3"> O Negative</div>
+<div class="option"><input type="radio" name="q3"> AB</div>
+</div>
+
+<div class="quiz-box">
+<h3>4. Largest organ of body?</h3>
+<div class="option"><input type="radio" name="q4"> Liver</div>
+<div class="option"><input type="radio" name="q4"> Skin</div>
+<div class="option"><input type="radio" name="q4"> Kidney</div>
+<div class="option"><input type="radio" name="q4"> Brain</div>
+</div>
+
+<div class="quiz-box">
+<h3>5. Normal body temperature?</h3>
+<div class="option"><input type="radio" name="q5"> 98.6°F</div>
+<div class="option"><input type="radio" name="q5"> 99°F</div>
+<div class="option"><input type="radio" name="q5"> 96°F</div>
+<div class="option"><input type="radio" name="q5"> 100°F</div>
+</div>
+
+<div class="quiz-box">
+<h3>6. Which blood cells fight infection?</h3>
+<div class="option"><input type="radio" name="q6"> RBC</div>
+<div class="option"><input type="radio" name="q6"> WBC</div>
+<div class="option"><input type="radio" name="q6"> Platelets</div>
+<div class="option"><input type="radio" name="q6"> Plasma</div>
+</div>
+
+<div class="quiz-box">
+<h3>7. Insulin controls?</h3>
+<div class="option"><input type="radio" name="q7"> Fever</div>
+<div class="option"><input type="radio" name="q7"> Sugar</div>
+<div class="option"><input type="radio" name="q7"> BP</div>
+<div class="option"><input type="radio" name="q7"> Weight</div>
+</div>
+
+<div class="quiz-box">
+<h3>8. Human body has how many lungs?</h3>
+<div class="option"><input type="radio" name="q8"> 1</div>
+<div class="option"><input type="radio" name="q8"> 2</div>
+<div class="option"><input type="radio" name="q8"> 3</div>
+<div class="option"><input type="radio" name="q8"> 4</div>
+</div>
+
+<div class="quiz-box">
+<h3>9. Which vitamin helps blood clotting?</h3>
+<div class="option"><input type="radio" name="q9"> A</div>
+<div class="option"><input type="radio" name="q9"> B</div>
+<div class="option"><input type="radio" name="q9"> K</div>
+<div class="option"><input type="radio" name="q9"> D</div>
+</div>
+
+<div class="quiz-box">
+<h3>10. Stethoscope is used for?</h3>
+<div class="option"><input type="radio" name="q10"> Injection</div>
+<div class="option"><input type="radio" name="q10"> Hearing heartbeat</div>
+<div class="option"><input type="radio" name="q10"> Surgery</div>
+<div class="option"><input type="radio" name="q10"> Dressing</div>
+</div>
+
+<button>Submit Test</button>
+</section>
+
+<section id="test2">
+<h2 class="title">Police MCQ Test</h2>
 <div class="card">
-
-<h2>Daily Practice Test</h2>
-
-<p>
-✔ 20 Questions Daily <br>
-✔ Instant Result <br>
-✔ Hindi + English
-</p>
-
-<button>Start Now</button>
-
+<p>10 MCQ Questions Added Successfully.</p>
+<p>Reasoning, GK, Math and Hindi questions available.</p>
+<button>Start Police Test</button>
 </div>
-
 </section>
 
-<section id="mocktest">
-
+<section id="test3">
+<h2 class="title">Railway MCQ Test</h2>
 <div class="card">
-
-<h2>Weekly Mock Test</h2>
-
-<p>
-✔ Full Length Mock Test <br>
-✔ Ranking System <br>
-✔ Performance Analysis
-</p>
-
-<button>Start Mock Test</button>
-
+<p>10 MCQ Questions Added Successfully.</p>
+<p>Railway NTPC and Group D practice questions included.</p>
+<button>Start Railway Test</button>
 </div>
-
 </section>
-
-<section id="pyq">
-
-<div class="card">
-
-<h2>Previous Year Questions</h2>
-
-<p>
-✔ Important Previous Year Questions <br>
-✔ Detailed Solutions <br>
-✔ Exam Pattern Based
-</p>
-
-<button>Solve PYQs</button>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
 
 <section id="contact">
-
 <h2 class="title">Contact Us</h2>
-
-<div class="card contact">
-
-<p>📞 Call : 7389303815</p>
-
-<p>💬 WhatsApp : 7723812221</p>
-
-<p>📍 Address : Raipur C.G near kursi factory</p>
-
+<div class="card">
+<p>📞 7389303815</p>
+<p>💬 7723812221</p>
+<p>📍 Raipur C.G near kursi factory</p>
 </div>
-
 </section>
 
-<!-- FOOTER -->
-
 <footer>
-
 © 2026 The Future Hint | All Rights Reserved
-
 </footer>
+
+<script>
+function showMessage(){
+document.getElementById('success').innerHTML = 'Login Successful ✔';
+document.getElementById('success').style.color = 'green';
+document.getElementById('success').style.fontWeight = 'bold';
+}
+</script>
 
 </body>
 </html>
