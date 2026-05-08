@@ -25,7 +25,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 20px;
-background:#ffffff;
+background:#fff;
 box-shadow:0 2px 10px rgba(0,0,0,0.1);
 position:sticky;
 top:0;
@@ -117,6 +117,19 @@ transform:translateY(-5px);
 color:#1e2a78;
 }
 
+/* BUTTON */
+
+button{
+background:red;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+margin-top:10px;
+}
+
 /* TEST BOX */
 
 .test-box{
@@ -130,16 +143,6 @@ background:white;
 padding:20px;
 border-radius:15px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-button{
-background:red;
-color:white;
-padding:10px 20px;
-border:none;
-border-radius:8px;
-cursor:pointer;
-font-weight:bold;
 }
 
 /* CONTACT */
@@ -224,10 +227,6 @@ Prepare for UP Nursing, MP Nursing, Police, Railway and other competitive exams 
 <b>The Future Hint</b> is a trusted educational platform dedicated to helping students achieve success in Nursing and Competitive Exams.
 </p>
 
-<p>
-We provide:
-</p>
-
 <ul>
 <li>Experienced Faculty</li>
 <li>Daily Practice Questions</li>
@@ -236,10 +235,6 @@ We provide:
 <li>Bilingual Study Material</li>
 <li>Affordable Courses</li>
 </ul>
-
-<p>
-Our mission is to guide every student toward success with quality education and smart preparation strategies.
-</p>
 
 </div>
 
@@ -256,38 +251,95 @@ Our mission is to guide every student toward success with quality education and 
 <div class="course">
 <h3>UP Nursing</h3>
 <p>Complete syllabus with mock tests and practice sets.</p>
-<button>Enroll Now</button>
+<a href="#upnursing"><button>Enroll Now</button></a>
 </div>
 
 <div class="course">
 <h3>MP Nursing</h3>
 <p>Expert guidance for MP Nursing entrance preparation.</p>
-<button>Enroll Now</button>
+<a href="#mpnursing"><button>Enroll Now</button></a>
 </div>
 
 <div class="course">
 <h3>UP Police</h3>
 <p>Physical + Written exam preparation with PYQs.</p>
-<button>Enroll Now</button>
-</div>
-
-<div class="course">
-<h3>MP Police</h3>
-<p>Daily classes and test series for MP Police exam.</p>
-<button>Enroll Now</button>
+<a href="#uppolice"><button>Enroll Now</button></a>
 </div>
 
 <div class="course">
 <h3>Railway</h3>
 <p>Railway Group D & NTPC complete preparation.</p>
-<button>Enroll Now</button>
+<a href="#railway"><button>Enroll Now</button></a>
 </div>
 
-<div class="course">
-<h3>SSC & Other Exams</h3>
-<p>Reasoning, English, GS and Mathematics preparation.</p>
-<button>Enroll Now</button>
 </div>
+
+</section>
+
+<!-- ENROLL SECTIONS -->
+
+<section id="upnursing">
+
+<div class="card">
+
+<h2>UP Nursing Enrollment</h2>
+
+<p>
+Course Duration : 6 Months <br>
+Mode : Online + Offline <br>
+Study Material : Included <br>
+Mock Tests : Weekly
+</p>
+
+<button>Join Course</button>
+
+</div>
+
+</section>
+
+<section id="mpnursing">
+
+<div class="card">
+
+<h2>MP Nursing Enrollment</h2>
+
+<p>
+Complete MP Nursing preparation with expert teachers and practice sets.
+</p>
+
+<button>Join Course</button>
+
+</div>
+
+</section>
+
+<section id="uppolice">
+
+<div class="card">
+
+<h2>UP Police Enrollment</h2>
+
+<p>
+Written exam + Physical preparation with previous year questions.
+</p>
+
+<button>Join Course</button>
+
+</div>
+
+</section>
+
+<section id="railway">
+
+<div class="card">
+
+<h2>Railway Enrollment</h2>
+
+<p>
+Daily classes, test series and full syllabus coverage for Railway exams.
+</p>
+
+<button>Join Course</button>
 
 </div>
 
@@ -304,20 +356,76 @@ Our mission is to guide every student toward success with quality education and 
 <div class="test">
 <h3>Daily Practice Test</h3>
 <p>Practice daily MCQs with instant score.</p>
-<button>Start Test</button>
+<a href="#dailytest"><button>Open Test</button></a>
 </div>
 
 <div class="test">
 <h3>Weekly Mock Test</h3>
 <p>Full syllabus mock tests every week.</p>
-<button>Start Test</button>
+<a href="#mocktest"><button>Open Test</button></a>
 </div>
 
 <div class="test">
 <h3>Previous Year Questions</h3>
 <p>Important PYQs with detailed solutions.</p>
-<button>Start Test</button>
+<a href="#pyq"><button>Open Test</button></a>
 </div>
+
+</div>
+
+</section>
+
+<!-- TEST DETAILS -->
+
+<section id="dailytest">
+
+<div class="card">
+
+<h2>Daily Practice Test</h2>
+
+<p>
+✔ 20 Questions Daily <br>
+✔ Instant Result <br>
+✔ Hindi + English
+</p>
+
+<button>Start Now</button>
+
+</div>
+
+</section>
+
+<section id="mocktest">
+
+<div class="card">
+
+<h2>Weekly Mock Test</h2>
+
+<p>
+✔ Full Length Mock Test <br>
+✔ Ranking System <br>
+✔ Performance Analysis
+</p>
+
+<button>Start Mock Test</button>
+
+</div>
+
+</section>
+
+<section id="pyq">
+
+<div class="card">
+
+<h2>Previous Year Questions</h2>
+
+<p>
+✔ Important Previous Year Questions <br>
+✔ Detailed Solutions <br>
+✔ Exam Pattern Based
+</p>
+
+<button>Solve PYQs</button>
 
 </div>
 
